@@ -4,9 +4,13 @@ Implementation of Jake's Battle Engine and ADYA Overworld Engine for Doki Doki L
 You will need to add images.rpa, fonts.rpa, and audio.rpa from an install of DDLC. The result is a "game" folder for a DDLC mod build.
 
 Main additions from the default engines:
+
 Scaled up Jake's engine to work with DDLC's resolution (800x600 -> DDLC's 1280x720).
+
 Made a more DDLC-themed sample battle using the chibi sticker sprites from the poem minigame. 
+
 Scaled the DDLC sprites to be callable from within ADYA. (They are too big, needed to be about 75% of their original size)
+
 Added two more NPCs to the default map so all the girls' sprites can be tested at the same time.
 
 Current work to-do:
