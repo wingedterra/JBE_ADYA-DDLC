@@ -16,45 +16,85 @@ Added two more NPCs to the default map so all the girls' sprites can be tested a
 Here's what engine each of the files are for (in case you want just one of the engines):
 
 activedemo.rpy - J
+
 ari*.png - A
+
 assets.rpy - J
+
 assets_overworld.rpy - A
+
 astar.rpy - A
+
 autoscroll.rpy - J
+
 battle-screens.rpy - J
+
 cgs.rpy - JA
+
 definitions.rpy - JA
+
 dirt.png - A
+
 door.ogg - A
+
 effects.rpy - JA
+
 engine.rpy - J
+
 engine-battlefields.rpy - J
+
 engine-display.rpy - J
+
 engine-events.rpy - J
+
 engine-extras.rpy - J
+
 engine-fighters.rpy - J
+
 engine-items.rpy - J
+
 engine-schema.rpy - J
+
 engine-skills.rpy - J
+
 engine-ui.rpy - J
+
 engine-xp.rpy - J
+
 equipment-demo.rpy - J
+
 example-items.rpy - J
+
 extension-demo.rpy - J
+
 gui.rpy - JA
+
 matrices.rpy - J
+
 options.rpy - JA
+
 overrides.rpy - JA
+
 overworld.rpy - A
+
 overworld_script.rpy - A
+
 screen_demo.rpy - J
+
 screens.rpy - JA
+
 script.rpy - JA
+
 skills-demo.rpy - J
+
 splash.rpy - JA
+
 test_main.rpy - JA
+
 transforms.rpy - JA
+
 villager*.png - A
+
 xp-demo.rpy - J
 
 Current work to-do:
