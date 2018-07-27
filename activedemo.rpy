@@ -1,9 +1,13 @@
 label active_demo:
-    
+    python:
+        _game_menu_screen = None
+        #Need to disable the menu during a battle as it's pretty buggy jumping out of the engine that way.
+        #Also, access to the menu means saving during a battle. Which works perfectly fine, just probably isn't desired behavior..
+        config.skipping = False
+        config.allow_skipping = False
+        allow_skipping = False
     play music "audio/battle2.ogg" fadein 0.5
-    $ config.skipping = False
-    $ config.allow_skipping = False
-    $ allow_skipping = False
+
 
     python:
         
@@ -148,6 +152,8 @@ label active_demo:
         python:
             import random
             bg_choice = random.randint(1,3)
+            _game_menu_screen = 'save' #Re-enable the menu
+
         if bg_choice == 1:
             show image "cg/y_cg2.png"
         elif bg_choice == 2:
