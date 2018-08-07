@@ -137,7 +137,7 @@ default preferences.sfx_volume = 0.75
 ## Generally the same as your build name
 ## Should always be a literal string and not an expression
 
-define config.save_directory = "DDLC_Mod_Template"
+define config.save_directory = "JBE_ADYA Template"
 
 
 ## Icon
