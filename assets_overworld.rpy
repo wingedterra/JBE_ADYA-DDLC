@@ -61,7 +61,7 @@ init python:
     ]
     
     #[signifier, goToLabel]
-    moordell_portal_tiles = [['p', 'leave_city']]
+    moordell_portal_tiles = [['p', 'leave_city'], ['i', 'inn']]
     
     
     #MAP LAYOUTS
@@ -90,7 +90,7 @@ init python:
     
     moordell_portals =[
     "ooooooopooooooo",
-    "ooooooooooooooo",
+    "ooooioooooooooo",
     "ooooooooooooooo",
     "ooooooooooooooo",
     "ooooooooooooooo",

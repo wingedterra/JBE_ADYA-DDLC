@@ -45,9 +45,8 @@ label talky2:
     hide monika with dissolve
     return
 label talky3:
-    #show girl at left onlayer npcPortraits with dissolve
     show yuri 1do at left onlayer npcPortraits with dissolve
-    y "I'm here to test adding more sprites!"
+    n "I'm here to test adding more sprites!"
     hide yuri with dissolve
     return
 label talky4:
@@ -70,9 +69,46 @@ label leave_city:
     return
     
 label inn:
-    scene inn with dissolve
-    "This is where an inn would go!"
-    "Truly amazing."
+    #scene inn with dissolve
+    #"This is where an inn would go!"
+    #"Truly amazing."
+    image mask_2:
+        "images/cg/monika/mask_2.png"
+        xtile 3 subpixel True
+        block:
+            xoffset 1280
+            linear 1200 xoffset 0
+            repeat
+    image mask_3:
+        "images/cg/monika/mask_3.png"
+        xtile 3 subpixel True
+        block:
+            xoffset 1280
+            linear 180 xoffset 0
+            repeat
+    image room_mask = LiveComposite((1280, 720), (0, 0), "mask_test", (0, 0), "mask_test2")
+    image room_mask2 = LiveComposite((1280, 720), (0, 0), "mask_test3", (0, 0), "mask_test4")
+    image monika_bg = "images/cg/monika/monika_bg.png"
+    image monika_bg_highlight:
+        "images/cg/monika/monika_bg_highlight.png"
+        function monika_alpha
+
+    show mask_2
+    show mask_3
+    show room_mask as rm:
+        size (320,180)
+        pos (30,200)
+    show room_mask2 as rm2:
+        size (320,180)
+        pos (935,200)
+    show monika_bg
+    show monika_bg_highlight
+    play music m1
+    m "Hi again, [player]!"
+    m "Welcome to my inn!"
+    m "This is just to show off what can be done with the portal tiles."
+    m "You can call dialog, or jump into a different map."
+    m "Anyway, I'll send you back to the town now."
     jump map
 label building_locked:
     "It's locked."
