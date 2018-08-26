@@ -140,10 +140,10 @@ init python:
                 elif facing == 'down':
                     self.image = Image(self.southFrames[0])
                     self.frames = self.southFrames
-                if facing == 'left':
+                elif facing == 'left':
                     self.image = Image(self.westFrames[0])
                     self.frames = self.westFrames
-                if facing == 'right':
+                elif facing == 'right':
                     self.image = Image(self.eastFrames[0])
                     self.frames = self.eastFrames
                 self.exclamation = Image("exclamation.png")
@@ -267,23 +267,19 @@ init python:
 
                         if self.destX < self.rect.x: #if the destination is to our left...
                             self.rect.x-= 8 #move left
-                            if self.frames != self.westFrames: #make sure our frames match up, just in case something happened.
-                                self.frames = self.westFrames
+                            self.frames = self.westFrames
 
                         if self.destX > self.rect.x: #do the same for right...
                             self.rect.x+= 8
-                            if self.frames != self.eastFrames:
-                                self.frames = self.eastFrames
+                            self.frames = self.eastFrames
 
                         if self.destY < self.rect.y: #...up..
                             self.rect.y-= 8
-                            if self.frames != self.northFrames:
-                                self.frames = self.northFrames
+                            self.frames = self.northFrames
 
                         if self.destY > self.rect.y: #...down
                             self.rect.y+= 8
-                            if self.frames != self.southFrames:
-                                self.frames = self.southFrames
+                            self.frames = self.southFrames
 
 
                 else: #if we have no desination set, just skip this method
@@ -301,9 +297,9 @@ init python:
             def snapToGrid(self,array):
                 #Intermittently make sure we're on the grid. This should prevent most collision issues with roaming.
                 for i in array:
-                    if i%TILESIZE != 0: #is our coordinate divisible by the tilesize? If not..
-                        multBy = int(i/TILESIZE) #divide it and get int, to get closest multiple
-                        i = TILESIZE*multBy #multiply this by tilesize to get closest tile
+                    if i % TILESIZE != 0: #is our coordinate divisible by the tilesize? If not..
+                        multBy = int(i / TILESIZE) #divide it and get int, to get closest multiple
+                        i = TILESIZE * multBy #multiply this by tilesize to get closest tile
 
             def snapToRange(self):
                 #snap NPC's back into range if they are nudged out
@@ -462,12 +458,10 @@ init python:
                         self.move()
                         self.checkObstacles(obstacles,player)
 
-
-
                     if self.Walking:
                         self.age += 1
                         self.walk_animation()
-                    elif not self.Walking:
+                    else:
                         self.image = Image(self.frames[0])
 
                     if self.rect.colliderect(player.rect):
@@ -494,11 +488,7 @@ init python:
                 self.age = 0
                 self.caught = False
 
-                self.northFrames = sprites[0]
-                self.southFrames = sprites[1]
-
-                self.eastFrames = sprites[2]
-                self.westFrames = sprites[3]
+                (self.northFrames,self.southFrames,self.eastFrames,self.westFrames) = sprites
 
                 self.standing = {'right': self.eastFrames[0], 'left': self.westFrames[0],
                                  'up': self.northFrames[0], 'down': self.southFrames[0]}
@@ -571,6 +561,7 @@ init python:
 
                 #set velocity according to movement direction
                 vel = 8
+
                 if self.up:
                     self.yvel = -vel
                 elif self.down:
