@@ -46,7 +46,7 @@ label talky2:
     return
 label talky3:
     show yuri 1do at left onlayer npcPortraits with dissolve
-    n "I'm here to test adding more sprites!"
+    y "I'm here to test adding more sprites!"
     hide yuri with dissolve
     return
 label talky4:

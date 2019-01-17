@@ -153,7 +153,7 @@ label active_demo:
             import random
             bg_choice = random.randint(1,3)
             _game_menu_screen = 'save' #Re-enable the menu
-
+        
         if bg_choice == 1:
             show image "cg/y_cg2.png"
         elif bg_choice == 2:
@@ -161,10 +161,11 @@ label active_demo:
         else:
             scene n_cg1_bg
             show n_cg1_base
-
+        
         "You won!"
     else:
+        pass
         #TODO: Play failure music
-        "Game Over: You Died."
+        #"Game Over: You Died."
         
-    jump start
+    #jump start
